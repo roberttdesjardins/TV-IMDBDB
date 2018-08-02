@@ -1,4 +1,4 @@
-// TODO: Season trend, Show trend, show line
+// TODO: Season trend, Show trend
 "use strict"
 let show
 let season
@@ -20,6 +20,8 @@ searchShowEl.addEventListener("submit", (e) => {
             show = showData
             console.log(show)
             renderSeasonsDom()
+            removeAllData(myChart)
+            generateShowData(show)
         }
     })
 })
@@ -53,6 +55,7 @@ const generateSeasonDom = (element) => {
             })
         } else {
             removeAllData(myChart)
+            generateShowData(show)
         }
     })
 
@@ -64,14 +67,37 @@ const generateSeasonDom = (element) => {
     return seasonEl
 }
 
+function generateShowData(show) {
+    for(let i = 0; i < show.totalSeasons; i++) {
+        seasonChosen = i + 1
+        getSeason((error, seasonData) => {
+            if (error) {
+                console.log(`Error: ${error}`)
+            } else {
+                season = seasonData
+                let avgRating = getAverageSeasonRating(season)
+                addData(myChart, `Season ${i+1}`, avgRating)
+            }
+        })
+    }
+}
+
+// Returns the average rating of all episodes in a season
+function getAverageSeasonRating(season) {
+    let totalRating = 0
+    season.Episodes.forEach((episode) =>{
+        totalRating += parseInt(episode.imdbRating)
+    })
+    return totalRating / season.Episodes.length
+}
+
 function generateChartData(season) {
     season.Episodes.forEach(element => {
-        //console.log(element)
         addData(myChart, `${element.Title}`, element.imdbRating)
     })
 }
 
-
+// Unselects all children in seasonsEl except the checkbox which was just checked
 function UnSelectAllExcept(int) {
     var items = seasonsEl.children
     for (var i = 0; i < items.length; i++) {
@@ -128,7 +154,6 @@ function removeData(chart) {
 }
 
 function removeAllData(chart) {
-    console.log(chart.data)
     while(chart.data.labels.length) {
         removeData(chart)
     }
