@@ -68,6 +68,7 @@ const generateSeasonDom = (element) => {
 }
 
 function generateShowData(show) {
+    let seasonArr = []
     for(let i = 0; i < show.totalSeasons; i++) {
         seasonChosen = i + 1
         getSeason((error, seasonData) => {
@@ -76,16 +77,30 @@ function generateShowData(show) {
             } else {
                 season = seasonData
                 let avgRating = getAverageSeasonRating(season)
-                addData(myChart, `Season ${i+1}`, avgRating)
+                seasonArr.push({
+                    seasonNumber: i+1,
+                    rating: avgRating
+                })
             }
         })
+    } 
+    let timer = setInterval(generateShowGraph, 100);
+    function generateShowGraph() {
+        if(seasonArr.length >= show.totalSeasons) {
+            clearInterval(timer);
+            seasonArr.sort(function(a, b){return a.seasonNumber - b.seasonNumber})
+            seasonArr.forEach((season) => {
+                addData(myChart, `Season ${season.seasonNumber}`, season.rating)
+            })
+            return;
+        }
     }
 }
 
 // Returns the average rating of all episodes in a season
 function getAverageSeasonRating(season) {
     let totalRating = 0
-    season.Episodes.forEach((episode) =>{
+    season.Episodes.forEach((episode) => {
         totalRating += parseInt(episode.imdbRating)
     })
     return totalRating / season.Episodes.length
