@@ -1,10 +1,11 @@
-// TODO: Season trend, Show trend
+// TODO: Season trend, Show trend, change colour of highest rated episode and lowest rated episode
 "use strict"
 let show
 let season
 let seasonChosen = 1
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")
+const showRatingEl = document.querySelector("#show-rating-div")
 let ctx = document.getElementById("myChart")
 let showToFind 
 
@@ -19,7 +20,9 @@ searchShowEl.addEventListener("submit", (e) => {
         } else {
             show = showData
             console.log(show)
+            document.querySelector("#show-name-div").textContent = show.Title
             renderSeasonsDom()
+            showRatingEl.textContent = `Overall Rating: ${show.imdbRating}`
             removeAllData(myChart)
             generateShowData(show)
         }
@@ -48,9 +51,9 @@ const generateSeasonDom = (element) => {
                     console.log(`Error: ${error}`)
                 } else {
                     season = seasonData
-                    //console.log(season)
                     removeAllData(myChart)
                     generateChartData(season)
+                    generateSeasonTrendLine(season) // TODO: Move to season trendline checkbox event listener
                 }
             })
         } else {
@@ -67,6 +70,7 @@ const generateSeasonDom = (element) => {
     return seasonEl
 }
 
+// Displays the chart for overall season ratings for each season
 function generateShowData(show) {
     let seasonArr = []
     for(let i = 0; i < show.totalSeasons; i++) {
@@ -84,16 +88,52 @@ function generateShowData(show) {
             }
         })
     } 
-    let timer = setInterval(generateShowGraph, 100);
+    let timer = setInterval(generateShowGraph, 100)
     function generateShowGraph() {
         if(seasonArr.length >= show.totalSeasons) {
-            clearInterval(timer);
+            clearInterval(timer)
             seasonArr.sort(function(a, b){return a.seasonNumber - b.seasonNumber})
             seasonArr.forEach((season) => {
-                addData(myChart, `Season ${season.seasonNumber}`, season.rating)
+                addData(myChart, `Season ${season.seasonNumber}`, season.rating, 0)
             })
-            return;
+            generateShowTrendLine(seasonArr)
+            return
         }
+    }
+}
+
+function generateShowTrendLine(listOfSeasons) {
+    let trendLineData = getTrendLineDataPoints(listOfSeasons)
+    for (let i = 0; i < trendLineData.numberOfPoints; i++) {
+        let y = trendLineData.offset + (trendLineData.slope * (i + 1))
+        addData(myChart, "", y, 1)
+    }
+}
+
+// creates the trendline data based on list of objects' ratings
+function getTrendLineDataPoints(dataArr) {
+    let sumXY = 0
+    let sumX = 0
+    let sumXsqr = 0
+    let sumY = 0
+    for (let i = 0; i < dataArr.length; i++) {
+        if (isNaN(dataArr[i].rating)) {
+            dataArr.splice(i, 1)
+        } else {
+            sumXY += (dataArr[i].rating * (i + 1))
+            sumX += (i + 1)
+            sumY += dataArr[i].rating
+            sumXsqr += ((i + 1) * (i + 1))
+        }
+    }
+    let slope = (dataArr.length * sumXY - sumX * sumY) / (dataArr.length * sumXsqr - sumX * sumX)
+    let offset = (sumY - slope * sumX) / dataArr.length
+    console.log(`slope: ${slope}`)
+    console.log(`offset: ${offset}`)
+    return {
+        numberOfPoints: dataArr.length,
+        slope: slope,
+        offset: offset
     }
 }
 
@@ -106,16 +146,31 @@ function getAverageSeasonRating(season) {
     return totalRating / season.Episodes.length
 }
 
+// Adds individual episode data to the chart
 function generateChartData(season) {
     season.Episodes.forEach(element => {
-        addData(myChart, `${element.Title}`, element.imdbRating)
+        addData(myChart, `${element.Title}`, element.imdbRating, 0)
     })
+}
+
+function generateSeasonTrendLine(season) {
+    let episodeArr = []
+    season.Episodes.forEach((episode) => {
+        episodeArr.push({
+            rating: parseInt(episode.imdbRating)
+        })
+    })
+    let trendLineData = getTrendLineDataPoints(episodeArr)
+    for (let i = 0; i < trendLineData.numberOfPoints; i++) {
+        let y = trendLineData.offset + (trendLineData.slope * (i + 1))
+        addData(myChart, "", y, 1)
+    }
 }
 
 // Unselects all children in seasonsEl except the checkbox which was just checked
 function UnSelectAllExcept(int) {
-    var items = seasonsEl.children
-    for (var i = 0; i < items.length; i++) {
+    let items = seasonsEl.children
+    for (let i = 0; i < items.length; i++) {
         if (int !== i){
             items[i].children[0].checked = false
         }
@@ -131,6 +186,12 @@ let myChart = new Chart(ctx, {
             data: [],
             fill: false,
             borderColor: "#3e95cd",
+            borderWidth: 2
+        }, {
+            label: 'Trendline',
+            data: [],
+            fill: false,
+            borderColor: "red",
             borderWidth: 2
         }]
     },
@@ -148,15 +209,19 @@ let myChart = new Chart(ctx, {
                     autoSkip:false
                 }  
             }]
+        },
+        animation: {
+            easing: "linear",
+            duration: 0
         }
     }
 })
 
-function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
+function addData(chart, label, data, dataset) {
+    if (label !== ""){
+        chart.data.labels.push(label);
+    }
+    chart.data.datasets[dataset].data.push(data)
     chart.update();
 }
 
