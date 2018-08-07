@@ -1,4 +1,4 @@
-// TODO: change colour of highest rated episode and lowest rated episode, format nicely, add checkbox for trendline
+// TODO: change colour of highest rated episode and lowest rated episode, format nicely, add checkbox for trendline, add year
 "use strict"
 let show
 let season
@@ -28,6 +28,7 @@ searchShowEl.addEventListener("submit", (e) => {
         }
     })
 })
+
 
 let myChart = new Chart(ctx, {
     type: 'line',
@@ -68,3 +69,15 @@ let myChart = new Chart(ctx, {
         }
     }
 })
+
+$(document).ready(function () {
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+});
