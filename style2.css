@@ -22,7 +22,7 @@ a, a:hover, a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background: #555;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -57,6 +57,25 @@ input {
     text-align: center;
 }
 
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+.nav-sidebar {
+    float: right;
+    padding: 10px;
+}
+  
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -64,7 +83,7 @@ input {
     width: 250px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100vh;
     z-index: 999;
     background: #555;
@@ -73,7 +92,7 @@ input {
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-right: -250px;
 }
 
 #sidebar .sidebar-header {
@@ -96,15 +115,8 @@ input {
     font-size: 1.1em;
     display: block;
 }
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
+
 
 
 a[data-toggle="collapse"] {
@@ -115,7 +127,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
     display: block;
     position: absolute;
-    right: 20px;
+    left: 20px; /* changed */
     font-family: 'Glyphicons Halflings';
     font-size: 0.6em;
 }
@@ -143,24 +155,20 @@ ul.CTAs a {
 }
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: #555;
 }
 a.article, a.article:hover {
-    background: #6d7fcc !important;
+    background: #555 !important;
     color: #fff !important;
 }
 
 /* ---------------------------------------------------
-    NAVBAR && FOOTER STYLE
+    ROW STYLE
 ----------------------------------------------------- */
  /* Remove the navbar's default margin-bottom and rounded borders */ 
     .row.content {height: 450px}
 
-    footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
-    }
+    
     @media screen and (max-width: 767px) {
     .row.content {height:auto;} 
     }
@@ -171,12 +179,12 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 #content {
     width: calc(100% - 250px);
-    padding: 40px;
+    padding: 0px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
 }
 #content.active {
     width: 100%;
@@ -188,10 +196,10 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
+        margin-right: -250px;
     }
     #sidebar.active {
-        margin-left: 0;
+        margin-right: 0;
     }
     #content {
         width: 100%;

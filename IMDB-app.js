@@ -1,4 +1,4 @@
-// TODO: change colour of highest rated episode and lowest rated episode, format nicely, add checkbox for trendline, add year
+// TODO: change colour of highest rated episode and lowest rated episode, format nicely, add checkbox for trendline
 "use strict"
 let show
 let season
@@ -17,10 +17,13 @@ searchShowEl.addEventListener("submit", (e) => {
     getShow((error, showData) => {
         if (error) {
             console.log(`Error: ${error}`)
+        }  else if (showData.Response === "False") {
+            document.querySelector("#show-name-div").textContent = "TV Show not found"
         } else {
             show = showData
             console.log(show)
             document.querySelector("#show-name-div").textContent = show.Title
+            document.querySelector("#show-years-div").textContent = show.Year
             renderSeasonsDom()
             showRatingEl.textContent = `Overall Rating: ${show.imdbRating}`
             removeAllData(myChart)
@@ -51,6 +54,7 @@ let myChart = new Chart(ctx, {
         }]
     },
     options: {
+        maintainAspectRatio: false,
         scales: {
             yAxes: [{
                 ticks: {

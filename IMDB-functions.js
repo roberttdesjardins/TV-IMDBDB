@@ -77,8 +77,11 @@ const generateSeasonDom = (element) => {
 
     let seasonText = document.createElement("span")
     seasonText.textContent = `Season ${element}`
+    let space = document.createElement("span")
+    space.textContent = ' '
 
     seasonEl.appendChild(seasonCheck)
+    seasonEl.appendChild(space)
     seasonEl.appendChild(seasonText)
     return seasonEl
 }
