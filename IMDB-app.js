@@ -42,6 +42,8 @@ let myChart = new Chart(ctx, {
             borderWidth: 2
         }, {
             label: 'Trendline',
+            pointRadius: 0,
+            pointHoverRadius: 0,
             data: [],
             fill: false,
             borderColor: "red",
@@ -53,8 +55,9 @@ let myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     autoSkip:false,
-                    beginAtZero:true,
-                    max:10
+                    beginAtZero:false,
+                    max:10,
+                    suggestedMin: 7
                 }
             }],
             xAxes: [{
