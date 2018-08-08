@@ -26,6 +26,7 @@ function generateShowData(show) {
                 addData(myChart, `Season ${season.seasonNumber}`, season.rating, 0)
             })
             generateShowTrendLine(seasonArr)
+            
             return
         }
     }

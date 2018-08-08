@@ -6,6 +6,7 @@ let seasonChosen = 1
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")
 const showRatingEl = document.querySelector("#show-rating-div")
+const trendlineEl = document.querySelector("#trendline-checkbox")
 let ctx = document.getElementById("myChart")
 let showToFind 
 
@@ -32,6 +33,12 @@ searchShowEl.addEventListener("submit", (e) => {
     })
 })
 
+trendlineEl.addEventListener("change", (e) => {
+    myChart.data.datasets[1].hidden = !myChart.data.datasets[1].hidden
+    myChart.options.legend.display = !myChart.options.legend.display
+    myChart.update()
+})
+
 
 let myChart = new Chart(ctx, {
     type: 'line',
@@ -50,7 +57,8 @@ let myChart = new Chart(ctx, {
             data: [],
             fill: false,
             borderColor: "red",
-            borderWidth: 2
+            borderWidth: 2,
+            hidden: true
         }]
     },
     options: {
@@ -73,6 +81,9 @@ let myChart = new Chart(ctx, {
         animation: {
             easing: "linear",
             duration: 0
+        },
+        legend: {
+            display: false
         }
     }
 })
