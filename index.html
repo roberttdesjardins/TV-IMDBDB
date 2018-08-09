@@ -5,39 +5,44 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <!-- Our Custom CSS -->
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="style.css">
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         <!-- Font Awesome JS -->
-        <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <div class="wrapper">
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-                <div class="container-fluid">
-                    <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-align-justify"></i>
-                    </button>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/index.html">RD</a>
+                        <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav">
-                            <li><a class="navbar-brand" href="/index.html">RD</a></li>
-                            <li><a class="nav-link active" href="/index.html">Home</a></li>
-                            <li><a class="nav-link" href="/about.html">About</a></li>
-                            <li class="nav-item dropdown">
-                                <div class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</div>
+                            <li><a class="nav-link" href="#home">Home</a></li>
+                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li class="btn-group">
+                                <a class="nav-link" href="#projects">Projects</a>
+                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/imdbdb.html">IMDBDB</a>
                                 </div>
                             </li>
-                            <li> <a class="nav-link" href="#">Contact</a></li>
+                            <li> <a class="nav-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="jumbotron text-center">
+            <div id="home" class="jumbotron text-center">
                 <h1 style="font-family: courier; color:white;">
                     Welcome!
                 </h1>
@@ -56,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid sectional bg-grey">
+            <div id="about" class="container-fluid sectional bg-grey">
                 <div class="row">
                     <div class="col-sm-4">
                         <i class="fas fa-laptop logo"></i>
@@ -108,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid sectional text-center bg-grey">
+            <div id="projects" class="container-fluid sectional text-center bg-grey">
                 <!-- TODO: Change images to projects -->
                 <h2>Portfolio</h2>
                 <h4>Select Projects</h4>
@@ -136,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid sectional">
+            <div id="contact" class="container-fluid sectional">
                 <h2 class="text-center">CONTACT</h2>
                 <div class="row">
                     <div class="col-sm-5">
@@ -167,18 +172,45 @@
             <!-- <footer class="fixed-bottom text-center">
                 <p>Website by Robert Desjardins</p>
                 </footer> -->
+            <footer class="container-fluid text-center">
+                <a href="#myPage" title="To Top">
+                    <span class="fas fa-chevron-up"></span>
+                </a>
+                <p>Website made by Robert Desjardins</p>
+            </footer>
         </div>
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <!-- Popper.JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <!-- jQuery Custom Scroller CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="requests.js"></script>
-        <script src="Chart.min.js"></script>
-        <script src="IMDB-functions.js"></script>
-        <script src="IMDB-app.js"></script>
+        <script>
+                $(document).ready(function(){
+                  // Add smooth scrolling to all links in navbar + footer link
+                  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                
+                   // Make sure this.hash has a value before overriding default behavior
+                  if (this.hash !== "") {
+                
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                
+                    // Store hash
+                    var hash = this.hash;
+                
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                      scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                
+                      // Add hash (#) to URL when done scrolling (default click behavior)
+                      window.location.hash = hash;
+                      });
+                    } // End if
+                  });
+                })
+        </script> 
     </body>
 </html>
