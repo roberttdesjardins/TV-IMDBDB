@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE hmtl>
 <html lang="en">
     <head>
@@ -21,7 +23,7 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="/index.html">RD</a>
                         <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-align-justify"></i>
+                        <i class="fas fa-align-justify"></i>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,7 +33,7 @@
                             <li class="btn-group">
                                 <a class="nav-link" href="#projects">Projects</a>
                                 <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="sr-only">Toggle Dropdown</span>
+                                <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/imdbdb.html">IMDBDB</a>
@@ -64,7 +66,7 @@
             <div id="about" class="container-fluid sectional bg-grey">
                 <div class="row">
                     <div class="col-sm-4">
-                        <i class="fas fa-laptop logo"></i>
+                        <i class="fas fa-laptop logo slideanim"></i>
                     </div>
                     <div class="col-sm-8">
                         <h2>About me page</h2>
@@ -119,21 +121,21 @@
                 <h4>Select Projects</h4>
                 <div class="row text-center">
                     <div class="col-sm-4">
-                        <div class="img-thumbnail">
+                        <div class="img-thumbnail slideanim">
                             <img src="tempProject.png" alt="IMDBDB">
                             <p><strong>IMDBDB</strong></p>
                             <p>A visual representation of TV shows based on their IMDB rating</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="img-thumbnail">
+                        <div class="img-thumbnail slideanim">
                             <img src="tempProject.png" alt="Space Game">
                             <p><strong>IOS mobile APP: Space Game</strong></p>
                             <p>A 2D mobile space game created for IOS</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="img-thumbnail">
+                        <div class="img-thumbnail slideanim">
                             <img src="tempProject.png" alt="Project 3">
                             <p><strong>Project 3</strong></p>
                             <p>Project 3 description</p>
@@ -174,7 +176,7 @@
                 </footer> -->
             <footer class="container-fluid text-center">
                 <a href="#myPage" title="To Top">
-                    <span class="fas fa-chevron-up"></span>
+                <span class="fas fa-chevron-up"></span>
                 </a>
                 <p>Website made by Robert Desjardins</p>
             </footer>
@@ -186,31 +188,42 @@
         <!-- jQuery Custom Scroller CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script>
-                $(document).ready(function(){
-                  // Add smooth scrolling to all links in navbar + footer link
-                  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-                
-                   // Make sure this.hash has a value before overriding default behavior
-                  if (this.hash !== "") {
-                
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-                
-                    // Store hash
-                    var hash = this.hash;
-                
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                      scrollTop: $(hash).offset().top
-                    }, 900, function(){
-                
-                      // Add hash (#) to URL when done scrolling (default click behavior)
-                      window.location.hash = hash;
-                      });
-                    } // End if
+            $(document).ready(function(){
+              // Add smooth scrolling to all links in navbar + footer link
+              $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            
+               // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+            
+                // Prevent default anchor click behavior
+                event.preventDefault();
+            
+                // Store hash
+                var hash = this.hash;
+            
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 900, function(){
+            
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
                   });
-                })
+                } // End if
+              });
+            })
+            $(window).scroll(function() {
+            $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+            
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("slide");
+            }
+            });
+            }); 
         </script> 
     </body>
 </html>
+
