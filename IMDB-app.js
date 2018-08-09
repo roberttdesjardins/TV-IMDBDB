@@ -1,4 +1,5 @@
-// TODO: change colour of highest rated episode and lowest rated episode, Change letters to white with black border, change image to fit nicely and change with size of the screen
+// TODO: change colour of highest rated episode and lowest rated episode, Change letters to white with black border, change image to fit nicely and change with size of the screen, add link to github and linkedin
+// Under home: Add 5 dots for skills. 
 "use strict"
 let show
 let season

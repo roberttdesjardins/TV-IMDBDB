@@ -25,7 +25,7 @@ a, a:hover, a:focus {
     background: #555;
     border: none;
     border-radius: 0;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     /* max-height:50px; */
 }
@@ -79,6 +79,12 @@ footer {
     padding: 10px;
 }
 
+.intro-paragraph {
+    width: 60vw;
+    padding: 100px;
+    font-size: 1.4em;
+}
+
 .laptop-background {
     background-image: url("laptop-notebook-computer-mobile-writing-working-726326-pxhere.com.jpg");
         /* Full height */
@@ -90,9 +96,44 @@ footer {
         background-size: cover;
 }
 
+.bg-grey {
+    background-color: #555;
+}
+
 .box_textshadow {
     color: white;
     text-shadow: 1px 1px 0px black; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+}
+
+.jumbotron {
+    background-color: #555;
+    color: #ffffff;
+    padding: 100px 25px;
+}
+
+.sectional {
+    padding: 60px 50px;
+}
+
+.logo {
+    font-size: 200px;
+}
+
+.logo-small {
+    color: #636363;
+    font-size: 50px;
+}
+
+.img-thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.img-thumbnail img {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 10px;
 }
   
 
@@ -230,5 +271,9 @@ a.article, a.article:hover {
     }
     #sidebarCollapse span {
         display: none;
+    }
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
     }
 }

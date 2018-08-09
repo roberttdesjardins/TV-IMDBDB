@@ -11,12 +11,12 @@
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+        <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </head>
-    <body class="laptop-background">
+    <body>
         <div class="wrapper">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
                 <div class="container-fluid">
                     <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-align-justify"></i>
@@ -37,17 +37,136 @@
                     </div>
                 </div>
             </nav>
-            <div class="container-fluid" align = "center">
+            <div class="jumbotron text-center">
                 <h1 style="font-family: courier; color:white;">
                     Welcome!
                 </h1>
                 <p style="font-family: courier; color:white;">
-                    My name is Robert Desjardins and I am a developer and a recent graduate from UBC with a combined degree in business and computer. This website includes my resume and select projects of mine.
+                    My name is Robert Desjardins and I am a developer and a recent graduate from UBC with a combined degree in business and computer science. This website includes my resume and select projects of mine.
                 </p>
             </div>
-            <footer class="fixed-bottom text-center">
+            <div class="container-fluid sectional">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>About Page</h2>
+                        <p>What this website is/Introduction</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sectional bg-grey">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <i class="fas fa-laptop logo"></i>
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>About me page</h2>
+                        <h4><strong>RESUME:</strong> Put resume stuff</h4>
+                        <p><strong>SKILLS/INTERESTS:</strong> Put skills and stuff</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sectional text-center">
+                <h2>SKILLS</h2>
+                <h4>What I have to offer</h4>
+                <br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="far fa-thumbs-up logo-small"></i>
+                        <h4>SKILL</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sectional text-center bg-grey">
+                <!-- TODO: Change images to projects -->
+                <h2>Portfolio</h2>
+                <h4>Select Projects</h4>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <div class="img-thumbnail">
+                            <img src="tempProject.png" alt="IMDBDB">
+                            <p><strong>IMDBDB</strong></p>
+                            <p>A visual representation of TV shows based on their IMDB rating</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="img-thumbnail">
+                            <img src="tempProject.png" alt="Space Game">
+                            <p><strong>IOS mobile APP: Space Game</strong></p>
+                            <p>A 2D mobile space game created for IOS</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="img-thumbnail">
+                            <img src="tempProject.png" alt="Project 3">
+                            <p><strong>Project 3</strong></p>
+                            <p>Project 3 description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sectional">
+                <h2 class="text-center">CONTACT</h2>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <p>Ways to reach me</p>
+                        <p><span class="fas fa-map-marker-alt"></span> Vancouver, Canada</p>
+                        <p><span class="fas fa-mobile-alt"></span> 778 323 9389</p>
+                        <p><span class="far fa-envelope"></span> roberttdesjardins@gmail.com</p>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-default pull-right" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <footer class="fixed-bottom text-center">
                 <p>Website by Robert Desjardins</p>
-            </footer>
+                </footer> -->
         </div>
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
