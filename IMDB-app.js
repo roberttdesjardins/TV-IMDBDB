@@ -1,4 +1,4 @@
-// TODO: change colour of highest rated episode and lowest rated episode, format nicely, add checkbox for trendline
+// TODO: change colour of highest rated episode and lowest rated episode, Change letters to white with black border, change image to fit nicely and change with size of the screen
 "use strict"
 let show
 let season

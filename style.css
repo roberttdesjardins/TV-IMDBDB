@@ -69,11 +69,30 @@ footer {
     background-color: #555;
     color: white;
     padding: 15px;
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
 }
 
 .nav-sidebar {
     float: right;
     padding: 10px;
+}
+
+.laptop-background {
+    background-image: url("laptop-notebook-computer-mobile-writing-working-726326-pxhere.com.jpg");
+        /* Full height */
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.box_textshadow {
+    color: white;
+    text-shadow: 1px 1px 0px black; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 }
   
 
@@ -186,6 +205,7 @@ a.article, a.article:hover {
     position: absolute;
     top: 0;
     left: 0;
+    padding-bottom: 100px;
 }
 #content.active {
     width: 100%;

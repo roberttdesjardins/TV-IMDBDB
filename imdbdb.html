@@ -23,7 +23,8 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li>
-                        <h6>Search for a TV show:</h5>
+                        <h6>
+                        Search for a TV show:</h5>
                     </li>
                     <li>
                         <form id="find-show-form">
@@ -38,7 +39,8 @@
                         <div id="seasons-div"></div>
                         <div id="show-rating-div"></div>
                         <div id="show-years-div"></div>
-                        <input id="trendline-checkbox" type="checkbox">
+                        <input id="trendline-checkbox" class="d-inline" type="checkbox">
+                        <p class="d-inline">Trendline</p>
                     </li>
                 </ul>
             </nav>
@@ -46,33 +48,33 @@
             <div id="content">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
-                            <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <i class="fas fa-align-justify"></i>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="nav navbar-nav">
-                                            <li><a class="navbar-brand" href="/index.html">RD</a></li>
-                                            <li><a class="nav-link" href="/index.html">Home</a></li>
-                                            <li><a class="nav-link" href="/about.html">About</a></li>
-                                            <li class="nav-item dropdown">
-                                                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item  active" href="/imdbdb.html">IMDBDB</a>
-                                                </div>
-                                            </li>
-                                            <li> <a class="nav-link" href="#">Contact</a></li>
-                                        </ul>
-                            </div>
-                            <button type="button" id="sidebarCollapse" class="btn btn-secondary ml-auto">
-                                <i class="navbar-toggler-icon"></i>
-                            </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav">
+                                <li><a class="navbar-brand" href="/index.html">RD</a></li>
+                                <li><a class="nav-link" href="/index.html">Home</a></li>
+                                <li><a class="nav-link" href="/about.html">About</a></li>
+                                <li class="nav-item dropdown">
+                                    <div class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</div>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item  active" href="/imdbdb.html">IMDBDB</a>
+                                    </div>
+                                </li>
+                                <li> <a class="nav-link" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" id="sidebarCollapse" class="btn btn-secondary ml-auto">
+                        <i class="navbar-toggler-icon"></i>
+                        </button>
                     </div>
                 </nav>
                 <div class="chart-container">
                     <canvas id="myChart"></canvas>
                 </div>
-                <footer class="text-center">
-                        <p>IMDBDB by Robert Desjardins</p>
+                <footer class="fixed-bottom text-center">
+                    <p>IMDBDB by Robert Desjardins</p>
                 </footer>
             </div>
         </div>
@@ -90,4 +92,3 @@
         <script src="IMDB-app.js"></script>
     </body>
 </html>
-

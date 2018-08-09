@@ -1,7 +1,7 @@
 <!DOCTYPE hmtl>
 <html lang="en">
     <head>
-        <title>TV IMDBDB</title>
+        <title>Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,30 +14,40 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="laptop-background">
         <div class="wrapper">
-            <!-- Page Content -->
-            <div>
-                <nav class="navbar navbar-expand-md navbar-dark static-top">
-                    <div class="container-fluid">
-                        <ul class="navbar-nav mr-auto">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="btn btn-dark d-inline-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav">
                             <li><a class="navbar-brand" href="/index.html">RD</a></li>
-                            <li><a class="nav-link" href="/index.html">Home</a></li>
+                            <li><a class="nav-link active" href="/index.html">Home</a></li>
                             <li><a class="nav-link" href="/about.html">About</a></li>
                             <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                                <div class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</div>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item  active" href="/imdbdb.html">IMDBDB</a>
+                                    <a class="dropdown-item" href="/imdbdb.html">IMDBDB</a>
                                 </div>
                             </li>
                             <li> <a class="nav-link" href="#">Contact</a></li>
                         </ul>
                     </div>
-                </nav>
-                <footer class="text-center fixed-bottom">
-                        <p>Created by Robert Desjardins</p>
-                </footer>
+                </div>
+            </nav>
+            <div class="container-fluid" align = "center">
+                <h1 style="font-family: courier; color:white;">
+                    Welcome!
+                </h1>
+                <p style="font-family: courier; color:white;">
+                    My name is Robert Desjardins and I am a developer and a recent graduate from UBC with a combined degree in business and computer. This website includes my resume and select projects of mine.
+                </p>
             </div>
+            <footer class="fixed-bottom text-center">
+                <p>Website by Robert Desjardins</p>
+            </footer>
         </div>
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -48,8 +58,8 @@
         <!-- jQuery Custom Scroller CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="requests.js"></script>
+        <script src="Chart.min.js"></script>
         <script src="IMDB-functions.js"></script>
         <script src="IMDB-app.js"></script>
     </body>
 </html>
-
