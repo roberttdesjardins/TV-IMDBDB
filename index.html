@@ -44,10 +44,31 @@
             </nav>
             <div id="home" class="jumbotron text-center">
                 <h1 class="text-style-white">
-                    Welcome!
+                    Hey there!
                 </h1>
+                <h4 class="text-style-white">
+                    I am
+                </h1>
+                <div class="row">
+                    <div class = "col-sm-4">
+                        <svg height=40 width=100%>
+                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(255, 255, 255);stroke-width:2" class="leftslideanim" />
+                        </svg>
+                    </div>
+                    <div class = "col-sm-4">
+                        <h2 class="text-style-white slideanim">
+                                Robert Desjardins
+                        </h2>
+                    </div>
+                    <div class = "col-sm-4">
+                        <svg height=40 width=100%>
+                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(255, 255, 255);stroke-width:2" class="rightslideanim" />
+                        </svg>
+                    </div>
+                </div>
+
                 <p class="text-style-white">
-                    My name is Robert Desjardins and I am a developer and a recent graduate from UBC with a combined degree in business and computer science. This website includes my resume and select projects of mine.
+                    I am a developer and a recent graduate from UBC with a combined degree in business and computer science. This website includes my resume and select projects of mine.
                 </p>
             </div>
             <div class="container-fluid sectional text-style-black">
@@ -57,14 +78,14 @@
                         <p>What this website is/Introduction</p>
                     </div>
                     <div class="col-sm-4">
-                        <i class="far fa-thumbs-up logo"></i>
+                        <i class="far fa-thumbs-up logo rightslideanim"></i>
                     </div>
                 </div>
             </div>
             <div id="about" class="container-fluid sectional bg-grey text-style-white">
                 <div class="row">
                     <div class="col-sm-4">
-                        <i class="fas fa-laptop logo slideanim"></i>
+                        <i class="fas fa-laptop logo leftslideanim"></i>
                     </div>
                     <div class="col-sm-8">
                         <h2>About me page</h2>
@@ -114,12 +135,11 @@
                 </div>
             </div>
             <div id="projects" class="container-fluid sectional text-center bg-grey text-style-white">
-                <!-- TODO: Change images to projects -->
                 <h2>Portfolio</h2>
                 <h4>Select Projects</h4>
                 <div class="row text-center">
                     <div class="col-sm-4">
-                        <div class="img-thumbnail slideanim">
+                        <div class="img-thumbnail leftslideanim">
                             <a href="/imdbdb.html"><img src="imdbdb.png" alt="IMDBDB"></a>
                             <p><a href="/imdbdb.html"><strong>IMDBDB</strong></a></p>
                             <p>A visual representation of TV shows based on their IMDB rating</p>
@@ -129,11 +149,11 @@
                         <div class="img-thumbnail slideanim">
                             <a href="https://itunes.apple.com/us/app/space-game-xd/id1361804194?ls=1&mt=8"><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
                             <p><a href="https://itunes.apple.com/us/app/space-game-xd/id1361804194?ls=1&mt=8"><strong>IOS mobile APP: Space Game XD</strong></a></p>
-                            <p>A 2D mobile space game created for IOS</p>
+                            <p>A 2D rogue-like mobile space game created for IOS</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                            <div class="img-thumbnail slideanim">
+                            <div class="img-thumbnail rightslideanim">
                                 <a href=""><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
                                 <p><a href=""><strong>Project 3</strong></a></p>
                                 <p>Project 3 Description</p>
@@ -217,6 +237,22 @@
             var winTop = $(window).scrollTop();
             if (pos < winTop + 600) {
             $(this).addClass("slide");
+            }
+            });
+            $(".leftslideanim").each(function(){
+            var pos = $(this).offset().top;
+            
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("leftSlide");
+            }
+            });
+            $(".rightslideanim").each(function(){
+            var pos = $(this).offset().top;
+            
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("rightSlide");
             }
             });
             }); 
