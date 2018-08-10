@@ -1,5 +1,12 @@
 // TODO: change colour of highest rated episode and lowest rated episode, Change letters to white with black border, change image to fit nicely and change with size of the screen, add link to github and linkedin
 // Under home: Add 5 dots for skills. 
+// Complete functionality of contact form
+// Make images in portfolio not change aspect ratio
+// Make projects link to appropriate sites
+// Add 3rd project
+// Find complementary colors
+// change css p
+// Center projects in navbar when screen is small
 "use strict"
 let show
 let season

@@ -21,7 +21,6 @@ a, a:hover, a:focus {
 }
 
 .navbar {
-    /* padding: 15px 10px; */
     background: #555;
     border: none;
     z-index: 9999;
@@ -30,8 +29,6 @@ a, a:hover, a:focus {
     border-radius: 0;
     margin-bottom: 0px;
     letter-spacing: 2px;
-    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
-    /* max-height:50px; */
 }
 
 .navbar-btn {
@@ -137,14 +134,39 @@ footer .fa {
 
 .img-thumbnail {
     padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
+    /* border: none; */
+    /* border-radius: 10; */
 }
 
 .img-thumbnail img {
-    width: 100%;
-    height: 50%;
+    /* width: 100%;
+    height: 65%; */
     margin-bottom: 10px;
+
+    max-width:100%;
+    width:auto;
+    height:auto;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: 0;
+    color: #999;
+}
+
+.navbar-nav li button:hover, .navbar-nav li.active button {
+    color: #555 !important;
+    background-color: #fff !important;
+}
+
+.text-style-white {
+    color:white;
+    font-family: Montserrat, sans-serif;
+}
+
+.text-style-black {
+    color:black;
+    font-family: Montserrat, sans-serif;
 }
   
 

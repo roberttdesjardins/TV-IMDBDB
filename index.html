@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE hmtl>
 <html lang="en">
     <head>
@@ -32,8 +30,8 @@
                             <li><a class="nav-link" href="#about">About</a></li>
                             <li class="btn-group">
                                 <a class="nav-link" href="#projects">Projects</a>
-                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
+                                <button class="dropdown-toggle dropdown-toggle-split dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/imdbdb.html">IMDBDB</a>
@@ -45,14 +43,14 @@
                 </div>
             </nav>
             <div id="home" class="jumbotron text-center">
-                <h1 style="font-family: courier; color:white;">
+                <h1 class="text-style-white">
                     Welcome!
                 </h1>
-                <p style="font-family: courier; color:white;">
+                <p class="text-style-white">
                     My name is Robert Desjardins and I am a developer and a recent graduate from UBC with a combined degree in business and computer science. This website includes my resume and select projects of mine.
                 </p>
             </div>
-            <div class="container-fluid sectional">
+            <div class="container-fluid sectional text-style-black">
                 <div class="row">
                     <div class="col-sm-8">
                         <h2>About Page</h2>
@@ -63,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div id="about" class="container-fluid sectional bg-grey">
+            <div id="about" class="container-fluid sectional bg-grey text-style-white">
                 <div class="row">
                     <div class="col-sm-4">
                         <i class="fas fa-laptop logo slideanim"></i>
@@ -75,22 +73,22 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid sectional text-center">
+            <div class="container-fluid sectional text-center text-style-black">
                 <h2>SKILLS</h2>
                 <h4>What I have to offer</h4>
                 <br>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
@@ -98,48 +96,48 @@
                 </div>
                 <br><br>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
                         <h4>SKILL</h4>
                         <p>Lorem ipsum dolor sit amet..</p>
                     </div>
                 </div>
             </div>
-            <div id="projects" class="container-fluid sectional text-center bg-grey">
+            <div id="projects" class="container-fluid sectional text-center bg-grey text-style-white">
                 <!-- TODO: Change images to projects -->
                 <h2>Portfolio</h2>
                 <h4>Select Projects</h4>
                 <div class="row text-center">
                     <div class="col-sm-4">
                         <div class="img-thumbnail slideanim">
-                            <img src="tempProject.png" alt="IMDBDB">
-                            <p><strong>IMDBDB</strong></p>
+                            <a href="/imdbdb.html"><img src="imdbdb.png" alt="IMDBDB"></a>
+                            <p><a href="/imdbdb.html"><strong>IMDBDB</strong></a></p>
                             <p>A visual representation of TV shows based on their IMDB rating</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="img-thumbnail slideanim">
-                            <img src="tempProject.png" alt="Space Game">
-                            <p><strong>IOS mobile APP: Space Game</strong></p>
+                            <a href="https://itunes.apple.com/us/app/space-game-xd/id1361804194?ls=1&mt=8"><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
+                            <p><a href="https://itunes.apple.com/us/app/space-game-xd/id1361804194?ls=1&mt=8"><strong>IOS mobile APP: Space Game XD</strong></a></p>
                             <p>A 2D mobile space game created for IOS</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="img-thumbnail slideanim">
-                            <img src="tempProject.png" alt="Project 3">
-                            <p><strong>Project 3</strong></p>
-                            <p>Project 3 description</p>
-                        </div>
+                            <div class="img-thumbnail slideanim">
+                                <a href=""><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
+                                <p><a href=""><strong>Project 3</strong></a></p>
+                                <p>Project 3 Description</p>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -149,8 +147,10 @@
                     <div class="col-sm-5">
                         <p>Ways to reach me</p>
                         <p><span class="fas fa-map-marker-alt"></span> Vancouver, Canada</p>
-                        <p><span class="fas fa-mobile-alt"></span> 778 323 9389</p>
-                        <p><span class="far fa-envelope"></span> roberttdesjardins@gmail.com</p>
+                        <p><a href="tel:1-778-323-9389"><i class="fas fa-mobile-alt"></i></a><a href="tel:1-778-323-9389"> 778 323 9389</a> </p>
+                        <p><a href="mailto:roberttdesjardins@gmail.com"><i class="far fa-envelope"></i></a> <a href="mailto:roberttdesjardins@gmail.com"> roberttdesjardins@gmail.com</a></p>
+                        <p><a href="https://www.linkedin.com/in/desjardinsrobert/"><i class="fab fa-linkedin"></i></a> <a href="https://www.linkedin.com/in/desjardinsrobert/">LinkedIn</a></p>
+                        <p><a href="https://github.com/roberttdesjardins"><i class="fab fa-github"></i></a> <a href="https://github.com/roberttdesjardins">GitHub</a></p>
                     </div>
                     <div class="col-sm-7">
                         <div class="row">
@@ -171,9 +171,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <footer class="fixed-bottom text-center">
-                <p>Website by Robert Desjardins</p>
-                </footer> -->
             <footer class="container-fluid text-center">
                 <a href="#myPage" title="To Top">
                 <span class="fas fa-chevron-up"></span>
