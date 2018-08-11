@@ -6,7 +6,7 @@
 // Add 3rd project
 // Find complementary colors
 // change css p
-// Center projects in navbar when screen is small
+// Add interests
 "use strict"
 let show
 let season

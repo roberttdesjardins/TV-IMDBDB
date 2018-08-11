@@ -28,10 +28,10 @@
                         <ul class="nav navbar-nav">
                             <li><a class="nav-link" href="#home">Home</a></li>
                             <li><a class="nav-link" href="#about">About</a></li>
-                            <li class="btn-group">
+                            <li class="btn-group dropdown ">
                                 <a class="nav-link" href="#projects">Projects</a>
                                 <button class="dropdown-toggle dropdown-toggle-split dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="sr-only">Toggle Dropdown</span>
+                                <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/imdbdb.html">IMDBDB</a>
@@ -43,51 +43,50 @@
                 </div>
             </nav>
             <div id="home" class="jumbotron text-center">
-                <h1 class="text-style-white">
+                <h1 class="text-style-black">
                     Hey there!
                 </h1>
-                <h4 class="text-style-white">
-                    I am
+                <h4 class="text-style-black">
+                I am
                 </h1>
                 <div class="row">
                     <div class = "col-sm-4">
                         <svg height=40 width=100%>
-                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(255, 255, 255);stroke-width:2" class="leftslideanim" />
+                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(0, 0, 0);stroke-width:2" class="leftslideanim" />
                         </svg>
                     </div>
                     <div class = "col-sm-4">
-                        <h2 class="text-style-white slideanim">
-                                Robert Desjardins
+                        <h2 class="text-style-black slideanim">
+                            Robert Desjardins
                         </h2>
                     </div>
                     <div class = "col-sm-4">
                         <svg height=40 width=100%>
-                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(255, 255, 255);stroke-width:2" class="rightslideanim" />
+                            <line x1=0% y1=50% x2=100% y2=50% style="stroke:rgb(0, 0, 0);stroke-width:2" class="rightslideanim" />
                         </svg>
                     </div>
                 </div>
-
-                <p class="text-style-white">
+                <p class="text-style-black">
                     I am a developer and a recent graduate from UBC with a combined degree in business and computer science. This website includes my resume and select projects of mine.
                 </p>
             </div>
             <div class="container-fluid sectional text-style-black">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <h2>About Page</h2>
-                        <p>What this website is/Introduction</p>
+                        <p></p>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <i class="far fa-thumbs-up logo rightslideanim"></i>
                     </div>
                 </div>
             </div>
             <div id="about" class="container-fluid sectional bg-grey text-style-white">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <i class="fas fa-laptop logo leftslideanim"></i>
+                    <div class="col-md-4">
+                        <i class="fas fa-laptop logo leftslideanim img-responsive"></i>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <h2>About me page</h2>
                         <h4><strong>RESUME:</strong> Put resume stuff</h4>
                         <p><strong>SKILLS/INTERESTS:</strong> Put skills and stuff</p>
@@ -96,26 +95,106 @@
             </div>
             <div class="container-fluid sectional text-center text-style-black">
                 <h2>SKILLS</h2>
-                <h4>What I have to offer</h4>
                 <br>
+                <h3>PROGRAMMING</h3>
                 <div class="row">
-                    <div class="col-sm-4 slideanim">
-                        <i class="far fa-thumbs-up logo-small"></i>
-                        <h4>SKILL</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
+                    <div class="col-sm-6 slideanim">
+                        <i class="far fa-hdd logo-small"></i>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>C</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>C++</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>Java</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>Javascript</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>Swift</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                                <div class="col-sm-4 slideanim" align="right">
+                                    <h5>Haskell</h5>
+                                </div>
+                                <div class="col-sm-8 slideanim">
+                                    5 Stars
+                                </div>
+                        </div>
                     </div>
-                    <div class="col-sm-4 slideanim">
-                        <i class="far fa-thumbs-up logo-small"></i>
-                        <h4>SKILL</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                    <div class="col-sm-4 slideanim">
-                        <i class="far fa-thumbs-up logo-small"></i>
-                        <h4>SKILL</h4>
-                        <p>Lorem ipsum dolor sit amet..</p>
+                    <div class="col-sm-6 slideanim">
+                        <i class="far fa-hdd logo-small"></i>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>HTML</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>Bootstrap</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>CSS</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>JQuery</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
+                        <div class="row hover-skill">
+                            <div class="col-sm-4 slideanim" align="right">
+                                <h5>SpriteKit Framework</h5>
+                            </div>
+                            <div class="col-sm-8 slideanim">
+                                5 Stars
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br><br>
+                <h3>MISC.</h3>
                 <div class="row">
                     <div class="col-sm-4 slideanim">
                         <i class="far fa-thumbs-up logo-small"></i>
@@ -153,11 +232,11 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                            <div class="img-thumbnail rightslideanim">
-                                <a href=""><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
-                                <p><a href=""><strong>Project 3</strong></a></p>
-                                <p>Project 3 Description</p>
-                            </div>
+                        <div class="img-thumbnail rightslideanim">
+                            <a href=""><img src="ItunesArtwork@2x.png" alt="Space Game XD"></a>
+                            <p><a href=""><strong>Project 3</strong></a></p>
+                            <p>Project 3 Description</p>
+                        </div>
                     </div>
                 </div>
             </div>
