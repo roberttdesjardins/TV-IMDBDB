@@ -186,9 +186,13 @@ footer .fa {
 .hover-skill:hover {
     color: #2CA39E;
     background-color: #F3EFE1;
+    font-size: 1.2em;
 }
 
-
+.vcenter {
+    top: 50%;
+    left:50%;
+}
   
 
 /* ---------------------------------------------------
@@ -281,7 +285,7 @@ a.article, a.article:hover {
     ROW STYLE
 ----------------------------------------------------- */
  /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .row.content {height: 450px}
+    /* .row.content {height: 450px} */
 
     
     @media screen and (max-width: 767px) {
