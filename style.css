@@ -21,7 +21,7 @@ a, a:hover, a:focus {
 }
 
 .navbar {
-    background: #F3EFE1;
+    /* background: #edc7b7; */
     border: none;
     z-index: 9999;
     font-size: 12px !important;
@@ -30,6 +30,7 @@ a, a:hover, a:focus {
     margin-bottom: 0px;
     letter-spacing: 2px;
 }
+
 
 .navbar-btn {
     box-shadow: none;
@@ -40,21 +41,6 @@ a, a:hover, a:focus {
 .navbar-nav > li{
     padding-left:10px;
     padding-right:10px;
-}
-
-.navbar-brand {
-    color: black !important;
-}
-
-
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #555 !important;
-}
-
-.navbar-nav li button:hover, .navbar-nav li.active button {
-    color: #fff !important;
-    background-color: #555 !important;
 }
 
 
@@ -109,7 +95,7 @@ footer .fa {
     font-size: 1.4em;
 }
 
-.laptop-background {
+/* .laptop-background {
     background-image: url("laptop-notebook-computer-mobile-writing-working-726326-pxhere.com.jpg");
         /* Full height */
         height: 100%; 
@@ -118,11 +104,7 @@ footer .fa {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-}
-
-.bg-grey {
-    background-color: #F3EFE1;
-}
+} */
 
 .box_textshadow {
     color: white;
@@ -130,8 +112,8 @@ footer .fa {
 }
 
 .jumbotron {
-    background-color: #F3EFE1;
-    color: #ffffff;
+    /* background-color: #F3EFE1;
+    color: #ffffff; */
     padding: 100px 25px;
     border-radius: 0 !important;
 }
@@ -187,6 +169,12 @@ footer .fa {
     font-size: 1.2em;
 }
 
+.carousel-style {
+    max-width: 500px;
+    width:auto;
+    height:auto;
+    margin: auto;
+}
   
 
 /* ---------------------------------------------------
@@ -303,6 +291,34 @@ a.article, a.article:hover {
 }
 #content.active {
     width: 100%;
+}
+
+
+/* ---------------------------------------------------
+    COLOR PALETTE
+----------------------------------------------------- */
+
+.background1 {
+    background-color: #edc7b7;
+}
+
+.background2 {
+    background-color: #eee2dc;
+}
+
+.navbar-brand {
+    color: black !important;
+}
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #555 !important;
+}
+
+.navbar-nav li button:hover, .navbar-nav li.active button {
+    color: #fff !important;
+    background-color: #555 !important;
 }
 
 /* ---------------------------------------------------
