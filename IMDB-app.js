@@ -1,10 +1,8 @@
 // TODO: change colour of highest rated episode and lowest rated episode, 
-// Change letters to white with black border, 
 // Complete functionality of contact form
-// Make projects link to appropriate sites
 // Add 3rd project
-// Dropdown projects goes off to side
 // Switch to parallax design
+// Add self-picture to jumbotron
 "use strict"
 let show
 let season

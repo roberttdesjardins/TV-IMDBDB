@@ -49,10 +49,10 @@ a, a:hover, a:focus {
     margin: 40px 0;
 }
 
-.center-dropdown {
+/* .center-dropdown {
     display: flex;
     align-items: center;
-}
+} */
 
 li {
     font-family: 'Poppins', sans-serif;
@@ -104,23 +104,20 @@ footer .fa {
 }
 
 .jumbotron {
-    /* background-color: #F3EFE1;
-    color: #ffffff; */
     padding: 100px 25px;
     border-radius: 0 !important;
     height: 100%;
-        /* The image used */
-        background-image: url("laptop-desk-notebook-computer-mobile-work-697832-pxhere.com.jpg");
-
-        /* Full height */
-        height: 100%;
     
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    /* The image used */
+    background-image: url("laptop-desk-notebook-computer-mobile-work-697832-pxhere.com.jpg");
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .sectional {
     padding: 60px 50px;
@@ -143,11 +140,6 @@ footer .fa {
     height:auto;
 }
 
-.dropdown-button {
-    background-color: transparent;
-    border: 0;
-    color: #999;
-}
 
 
 .carousel-style {
@@ -156,6 +148,11 @@ footer .fa {
     height:auto;
     margin: auto;
 }
+
+/* div h5 {
+    text-align: right;
+    float: right;
+} */
 
   
 
@@ -240,10 +237,7 @@ a.download {
     background: #fff;
     color: #555;
 }
-/* a.article, a.article:hover {
-    background: #555 !important;
-    color: #fff !important;
-} */
+
 
 
 /* ---------------------------------------------------
@@ -304,12 +298,18 @@ a.download {
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #fff !important;
-    background-color: #555 !important;
+    background-color: #123c69 !important;
 }
 
 .navbar-nav li button:hover, .navbar-nav li.active button {
     color: #fff !important;
-    background-color: #555 !important;
+    background-color: #123c69 !important;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: 0;
+    color: #999;
 }
 
 p {
@@ -321,12 +321,12 @@ p {
 }
 
 .logo {
-    color: #123c69;
+    /* color: #123c69; */
     font-size: 200px;
 }
 
 .logo-small {
-    color: #123c69;
+    /* color: #123c69; */
     font-size: 50px;
 }
 
@@ -353,14 +353,14 @@ p {
     visibility: visible;
 }
 .leftSlide {
-        /* The name of the animation */
-        animation-name: leftSlide;
-        -webkit-animation-name: leftSlide;
-        /* The duration of the animation */
-        animation-duration: 1s;
-        -webkit-animation-duration: 1s;
-        /* Make the element visible */
-        visibility: visible;
+    /* The name of the animation */
+    animation-name: leftSlide;
+    -webkit-animation-name: leftSlide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
 }
 .rightSlide {
     /* The name of the animation */
@@ -459,5 +459,16 @@ p {
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
+    }
+    div h5 {
+        text-align: center;
+        /* float: center; */
+    }
+}
+
+@media(min-width: 768px) {
+    div h5 {
+        text-align: right;
+        float: right;
     }
 }
