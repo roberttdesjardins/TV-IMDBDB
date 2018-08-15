@@ -3,10 +3,8 @@
 // Complete functionality of contact form
 // Make projects link to appropriate sites
 // Add 3rd project
-// Find complementary colors
-// change css p
-// Add interests
 // Dropdown projects goes off to side
+// Switch to parallax design
 "use strict"
 let show
 let season

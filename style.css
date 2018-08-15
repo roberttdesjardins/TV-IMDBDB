@@ -6,14 +6,6 @@ body {
     background: #fafafa;
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
 a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
@@ -116,20 +108,24 @@ footer .fa {
     color: #ffffff; */
     padding: 100px 25px;
     border-radius: 0 !important;
+    height: 100%;
+        /* The image used */
+        background-image: url("laptop-desk-notebook-computer-mobile-work-697832-pxhere.com.jpg");
+
+        /* Full height */
+        height: 100%;
+    
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .sectional {
     padding: 60px 50px;
 }
 
-.logo {
-    font-size: 200px;
-}
-
-.logo-small {
-    color: #636363;
-    font-size: 50px;
-}
 
 .img-thumbnail {
     padding: 0 0 15px 0;
@@ -153,21 +149,6 @@ footer .fa {
     color: #999;
 }
 
-.text-style-white {
-    color:white;
-    font-family: Montserrat, sans-serif;
-}
-
-.text-style-black {
-    color:black;
-    font-family: Montserrat, sans-serif;
-}
-
-.hover-skill:hover {
-    color: #2CA39E;
-    background-color: #F3EFE1;
-    font-size: 1.2em;
-}
 
 .carousel-style {
     max-width: 500px;
@@ -175,6 +156,7 @@ footer .fa {
     height:auto;
     margin: auto;
 }
+
   
 
 /* ---------------------------------------------------
@@ -258,10 +240,10 @@ a.download {
     background: #fff;
     color: #555;
 }
-a.article, a.article:hover {
+/* a.article, a.article:hover {
     background: #555 !important;
     color: #fff !important;
-}
+} */
 
 
 /* ---------------------------------------------------
@@ -299,17 +281,26 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 
 .background1 {
-    background-color: #edc7b7;
+    background-color: #eee2dc;
 }
 
 .background2 {
-    background-color: #eee2dc;
+    background-color: #bab2b5;
+}
+
+.text-style-main {
+    color: #ac3b61;
+    font-family: Montserrat, sans-serif;
+}
+
+.text-style-alt {
+    color:#123c69;
+    font-family: Montserrat, sans-serif;
 }
 
 .navbar-brand {
     color: black !important;
 }
-
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #fff !important;
@@ -319,6 +310,30 @@ a.article, a.article:hover {
 .navbar-nav li button:hover, .navbar-nav li.active button {
     color: #fff !important;
     background-color: #555 !important;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #7f032d;
+}
+
+.logo {
+    color: #123c69;
+    font-size: 200px;
+}
+
+.logo-small {
+    color: #123c69;
+    font-size: 50px;
+}
+
+.hover-skill:hover { /* Skill hover */
+    color: #123c69;
+    background-color: #bab2b5;
+    font-size: 1.2em;
 }
 
 /* ---------------------------------------------------
