@@ -87,17 +87,6 @@ footer .fa {
     font-size: 1.4em;
 }
 
-/* .laptop-background {
-    background-image: url("laptop-notebook-computer-mobile-writing-working-726326-pxhere.com.jpg");
-        /* Full height */
-        height: 100%; 
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-} */
-
 .box_textshadow {
     color: white;
     text-shadow: 1px 1px 0px black; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
@@ -109,7 +98,7 @@ footer .fa {
     height: 100%;
     
     /* The image used */
-    background-image: url("laptop-desk-notebook-computer-mobile-work-697832-pxhere.com.jpg");
+    background-image: url(Images/laptop-desk-notebook-computer-mobile-work-697832-pxhere.com.jpg);
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
