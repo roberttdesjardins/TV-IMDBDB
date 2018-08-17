@@ -1,20 +1,18 @@
 // CREATING OVERALL SHOW CHART
 // Adds data to the chart for overall season ratings for each season
-function generateShowData(show) {
+function generateShowData(showToFind, show) {
     let seasonArr = []
     for(let i = 0; i < show.totalSeasons; i++) {
-        seasonChosen = i + 1
-        getSeason((error, seasonData) => {
-            if (error) {
-                console.log(`Error: ${error}`)
-            } else {
-                season = seasonData
-                let avgRating = getAverageSeasonRating(season)
-                seasonArr.push({
-                    seasonNumber: i+1,
-                    rating: avgRating
-                })
-            }
+        let seasonChosen = i + 1
+        getSeason(showToFind, seasonChosen).then((seasonData) => {
+            season = seasonData
+            let avgRating = getAverageSeasonRating(season)
+            seasonArr.push({
+                seasonNumber: i+1,
+                rating: avgRating
+            })
+        }).catch((error) => {
+            console.log(`Error: ${error}`)
         })
     } 
     let timer = setInterval(generateShowGraph, 100)
@@ -44,14 +42,14 @@ function getAverageSeasonRating(season) {
 
 // CREATING SEASON CHART and DOM
 // Creates the DOM for seasons and their checkboxes
-const renderSeasonsDom = () => {
+const renderSeasonsDom = (showToFind) => {
     seasonsEl.textContent = ""
     for (let i = 0; i < show.totalSeasons; i++) {
-        seasonsEl.appendChild(generateSeasonDom(i+1))
+        seasonsEl.appendChild(generateSeasonDom(i+1, showToFind))
     }
 }
 // Get the DOM elements for each season in a show
-const generateSeasonDom = (element) => {
+const generateSeasonDom = (element, showToFind) => {
     let seasonEl = document.createElement("div")
 
     let seasonCheck = document.createElement("input")
@@ -59,20 +57,18 @@ const generateSeasonDom = (element) => {
     seasonCheck.addEventListener("change", (e) => {
         if (e.target.checked) {
             UnSelectAllExcept(element-1)
-            seasonChosen = element
-            getSeason((error, seasonData) => {
-                if (error) {
-                    console.log(`Error: ${error}`)
-                } else {
-                    season = seasonData
-                    removeAllData(myChart)
-                    generateSeasonData(season)
-                    generateSeasonTrendLine(season) // TODO: Move to season trendline checkbox event listener
-                }
+            let seasonChosen = element
+            getSeason(showToFind, seasonChosen).then((seasonData) => {
+                season = seasonData
+                removeAllData(myChart)
+                generateSeasonData(season)
+                generateSeasonTrendLine(season)
+            }).catch((error) => {
+                console.log(`Error: ${error}`)
             })
         } else {
             removeAllData(myChart)
-            generateShowData(show)
+            generateShowData(showToFind, show)
         }
     })
 

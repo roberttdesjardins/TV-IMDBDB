@@ -1,39 +1,56 @@
-// TODO: change colour of highest rated episode and lowest rated episode, 
+// TODO: 
 // Complete functionality of contact form
 // Add 3rd project
-// Switch to parallax design
+// Switch to parallax design (Semi done)
 // Add self-picture to jumbotron
+// Test on phone
 "use strict"
 let show
 let season
-let seasonChosen = 1
+//let seasonChosen = 1
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")
 const showRatingEl = document.querySelector("#show-rating-div")
 const trendlineEl = document.querySelector("#trendline-checkbox")
 let ctx = document.getElementById("myChart")
-let showToFind 
+//let showToFind 
 
 searchShowEl.addEventListener("submit", (e) => {
     e.preventDefault()
     
-    showToFind = e.target.elements.searchShow.value
+    let showToFind = e.target.elements.searchShow.value
 
-    getShow((error, showData) => {
-        if (error) {
-            console.log(`Error: ${error}`)
-        }  else if (showData.Response === "False") {
+    // getShow((error, showData) => {
+    //     if (error) {
+    //         console.log(`Error: ${error}`)
+    //     }  else if (showData.Response === "False") {
+    //         document.querySelector("#show-name-div").textContent = "TV Show not found"
+    //     } else {
+    //         show = showData
+    //         console.log(show)
+    //         document.querySelector("#show-name-div").textContent = show.Title
+    //         document.querySelector("#show-years-div").textContent = show.Year
+    //         renderSeasonsDom()
+    //         showRatingEl.textContent = `Overall Rating: ${show.imdbRating}`
+    //         removeAllData(myChart)
+    //         generateShowData(show)
+    //     }
+    // })
+    getShow(showToFind).then((showData) => {
+        if (showData.response === "False") {
             document.querySelector("#show-name-div").textContent = "TV Show not found"
         } else {
             show = showData
             console.log(show)
             document.querySelector("#show-name-div").textContent = show.Title
             document.querySelector("#show-years-div").textContent = show.Year
-            renderSeasonsDom()
+            renderSeasonsDom(showToFind)
             showRatingEl.textContent = `Overall Rating: ${show.imdbRating}`
             removeAllData(myChart)
-            generateShowData(show)
+            generateShowData(showToFind, show)
         }
+    }).catch((error) => {
+        csonole.log(`Error: ${error}`)
     })
 })
 
