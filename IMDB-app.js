@@ -4,6 +4,7 @@
 // Switch to parallax design (Semi done)
 // Add self-picture to jumbotron
 // Test on phone
+// Switch from promises to Async await and fetch
 "use strict"
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")
@@ -25,10 +26,12 @@ searchShowEl.addEventListener("submit", (e) => {
             renderSeasonsDom(showToFind, showData)
             showRatingEl.textContent = `Overall Rating: ${showData.imdbRating}`
             removeAllData(myChart)
-            generateShowData(showToFind, showData)
+            generateShowData(showToFind, showData).then((result) => {
+                generateShowGraph(result)
+            })
         }
     }).catch((error) => {
-        csonole.log(`Error: ${error}`)
+        console.log(`Error: ${error}`)
     })
 })
 

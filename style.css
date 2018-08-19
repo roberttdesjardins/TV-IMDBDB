@@ -13,7 +13,6 @@ a, a:hover, a:focus {
 }
 
 .navbar {
-    /* background: #edc7b7; */
     border: none;
     z-index: 9999;
     font-size: 12px !important;
@@ -49,10 +48,6 @@ a, a:hover, a:focus {
     margin: 40px 0;
 }
 
-/* .center-dropdown {
-    display: flex;
-    align-items: center;
-} */
 
 li {
     font-family: 'Poppins', sans-serif;
@@ -143,7 +138,6 @@ footer .fa {
     float: right;
 } */
 
-  
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -155,7 +149,7 @@ footer .fa {
     right: 0;
     height: 100vh;
     z-index: 999;
-    background: #F3EFE1;
+    background: #eee2dc;
     color: black;
     transition: all 0.3s;
 }
@@ -166,12 +160,12 @@ footer .fa {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #F3EFE1;
+    background: #eee2dc;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #F3EFE1;
+    border-bottom: 1px solid #eee2dc;
 }
 
 #sidebar ul p {
