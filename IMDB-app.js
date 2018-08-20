@@ -4,7 +4,7 @@
 // Switch to parallax design (Semi done)
 // Add self-picture to jumbotron
 // Test on phone
-// Switch from promises to Async await and fetch
+// Rank skills and arange in order
 "use strict"
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")

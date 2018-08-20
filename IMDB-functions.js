@@ -1,51 +1,23 @@
 // CREATING OVERALL SHOW CHART
-// Adds data to the chart for overall season ratings for each season
-// function generateShowData(showToFind, showData) {
-//     let seasonArr = []
-//     for(let i = 0; i < showData.totalSeasons; i++) {
-//         let seasonChosen = i + 1
-//         getSeason(showToFind, seasonChosen).then((seasonData) => {
-//             let avgRating = getAverageSeasonRating(seasonData)
-//             seasonArr.push({
-//                 seasonNumber: i+1,
-//                 rating: avgRating
-//             })
-//         }).catch((error) => {
-//             console.log(`Error: ${error}`)
-//         })
-//     } 
-//     let timer = setInterval(generateShowGraph, 100)
-//     function generateShowGraph() {
-//         if(seasonArr.length >= showData.totalSeasons) {
-//             clearInterval(timer)
-//             seasonArr.sort(function(a, b){return a.seasonNumber - b.seasonNumber})
-//             seasonArr.forEach((season) => {
-//                 addData(myChart, `Season ${season.seasonNumber}`, season.rating, 0)
-//             })
-//             generateShowTrendLine(seasonArr)
-            
-//             return
-//         }
-//     }
-// }
-
+// Fetches data for each season and returns an array with each seasons name and average rating
 const generateShowData = async (showToFind, showData) => {
     let seasonArr = []
 
     for (let i = 0; i < showData.totalSeasons; i++) {
-            await getSeason(showToFind, i + 1).then((seasonData) => {
-                let avgRating = getAverageSeasonRating(seasonData)
-                seasonArr.push({
-                    seasonNumber: i+1,
-                    rating: avgRating
-                })
-            }).catch((error) => {
-                console.log(`Error: ${error}`)
+        await getSeason(showToFind, i + 1).then((seasonData) => {
+            let avgRating = getAverageSeasonRating(seasonData)
+            seasonArr.push({
+                seasonNumber: i+1,
+                rating: avgRating
             })
+        }).catch((error) => {
+            console.log(`Error: ${error}`)
+        })
     }
     return seasonArr
 }
 
+// Adds data to the chart for overall season ratings for each season
 const generateShowGraph = (seasonArr) => {
     seasonArr.forEach((season) => {
         addData(myChart, `Season ${season.seasonNumber}`, season.rating, 0)
@@ -66,7 +38,6 @@ function getAverageSeasonRating(season) {
     })
     return totalRating / numberOfEpisodesWithRatings
 }
-
 
 
 // CREATING SEASON CHART and DOM
