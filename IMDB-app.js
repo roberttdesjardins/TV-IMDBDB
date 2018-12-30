@@ -5,6 +5,9 @@
 // Add self-picture to jumbotron
 // Test on phone
 // Rank skills and arange in order
+// Turn season selection into radio buttons
+// Put alt text on all images
+// Change h1-h6 tags to be relavent instead of based on text size - SHOULD ONLY HAVE 1 h1
 "use strict"
 const searchShowEl = document.querySelector("#find-show-form")
 const seasonsEl = document.querySelector("#seasons-div")
